@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoJoth - Showroom Mobil Premium</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo"
+          ><i class="fa-solid fa-car-side"></i> Auto<span>Joth</span></a
+        >
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Beranda</a></li>
+          <li><a href="#catalog">Katalog Mobil</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="cart-icon" id="cartBtn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge" id="cartCount">0</span>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION (Dengan Efek Melayang) -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <span class="hero-tag">Showroom Mobil Impor #1</span>
+          <h1>Temukan Mobil Impian Dengan Performa Terbaik</h1>
+          <p>
+            Nikmati pengalaman berkendara kelas dunia dengan koleksi mobil
+            sport, luxury sedan, dan SUV modern berkualitas premium.
+          </p>
+          <div class="hero-buttons">
+            <a href="#catalog" class="btn btn-primary"
+              >Lihat Katalog <i class="fa-solid fa-arrow-right"></i
+            ></a>
+            <a href="#about" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80"
+            alt="Supercar"
+            class="hero-img floating-img"
+          />
+          <div class="floating-badge badge-1">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <h4>Garansi Resmi</h4>
+              <p>Hingga 5 Tahun</p>
+            </div>
+          </div>
+          <div class="floating-badge badge-2">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <h4>Mesin Turbo</h4>
+              <p>Performa Tinggi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CATALOG SECTION -->
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <div class="section-title">
+          <h2>Katalog Mobil Impian</h2>
+          <p>
+            Jelajahi berbagai pilihan mobil kelas atas dengan spesifikasi
+            terbaik
+          </p>
+        </div>
+
+        <!-- SEARCH & FILTER -->
+        <div class="filter-box">
+          <div class="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Cari nama mobil..."
+            />
+          </div>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="sedan">Sedan</button>
+            <button class="filter-btn" data-filter="suv">SUV</button>
+            <button class="filter-btn" data-filter="sport">Sport</button>
+          </div>
+        </div>
+
+        <!-- CAR GRID (Diisi secara Dinamis oleh JS via API) -->
+        <div class="car-grid" id="carGrid">
+          <!-- Loading State / Content akan di-render dari script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+      <div class="container about-container">
+        <div class="about-card">
+          <i class="fa-solid fa-award"></i>
+          <h3>Kualitas Terjamin</h3>
+          <p>
+            Setiap unit melalui 150+ titik inspeksi ketat sebelum sampai ke
+            tangan konsumen.
+          </p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Layanan 24/7</h3>
+          <p>
+            Tim dukungan kami siap melayani Anda kapan saja untuk bantuan
+            darurat dan konsultasi.
+          </p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <h3>Harga Terbaik</h3>
+          <p>
+            Penawaran skema pembayaran transparan dan bunga fleksibel bekerja
+            sama dengan bank terkemuka.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-info">
+          <a href="#" class="logo"
+            ><i class="fa-solid fa-car-side"></i> Auto<span>Joth</span></a
+          >
+          <p>
+            Showroom Mobil Terpercaya untuk Pengalaman Berkendara Terbaik Anda.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#catalog">Katalog</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Ikuti Kami</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AutoJoth Showroom. Tugas Akhir BTNG Frontend.</p>
+      </div>
+    </footer>
+
+    <!-- MODAL DETAIL MOBIL -->
+    <div class="modal" id="carModal">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div class="modal-body" id="modalBody">
+          <!-- Data Detail diisi via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast">
+      <i class="fa-solid fa-circle-check"></i>
+      <span id="toastMsg">Mobil berhasil ditambahkan ke keranjang!</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
